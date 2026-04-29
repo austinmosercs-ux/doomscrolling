@@ -1,0 +1,46 @@
+/* italic quote shown under the hero on the opinion page */
+.hero-quote {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--gray);
+    font-style: italic;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.hero-quote span {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    color: #666;
+    font-style: italic;
+}
+
+/* wrapper that holds the parallax shapes behind the essay */
+.essay-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.essay-wrap > .essay {
+    position: relative;
+    z-index: 1;
+}
+
+/* the column of paragraphs on the opinion page */
+.page-opinion .essay {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 120px 24px 80px;
+}
+
+/* spacing between paragraphs */
+.page-opinion .essay-section {
+    margin-bottom: 100px;
+}
+
+/* the actual paragraph text */
+.page-opinion .essay-body {
+    font-size: 1.05rem;
+    color: var(--white);
+    line-height: 1.85;
+    text-align: left;
+}

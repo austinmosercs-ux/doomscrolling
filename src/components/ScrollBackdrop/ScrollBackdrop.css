@@ -1,0 +1,62 @@
+/* the floating shapes that move behind everything when you scroll.
+   each shape has a "kind" that decides what it looks like.
+   the JS file moves them around based on scrollY */
+
+.scroll-backdrop {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.backdrop-shape {
+    position: absolute;
+    display: block;
+    will-change: transform;
+}
+
+/* outlined circle */
+.backdrop-ring {
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    opacity: 0.35;
+}
+
+/* filled circle */
+.backdrop-disc {
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* outlined rounded square */
+.backdrop-square {
+    border: 2px solid var(--accent);
+    border-radius: 18px;
+    opacity: 0.3;
+}
+
+/* filled rounded square */
+.backdrop-block {
+    background: var(--accent);
+    border-radius: 18px;
+    opacity: 0.45;
+}
+
+/* on smaller screens, fade the shapes out a bit so the text is easier to read */
+@media (max-width: 720px) {
+    .backdrop-ring,
+    .backdrop-square,
+    .backdrop-disc,
+    .backdrop-block {
+        opacity: 0.2;
+    }
+}
+
+/* if the user has reduced motion turned on, freeze the parallax */
+@media (prefers-reduced-motion: reduce) {
+    .backdrop-shape {
+        transform: none !important;
+    }
+}

@@ -1,0 +1,22 @@
+/* button used across the site */
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+/* nudges to the right and fades a little when you hover */
+.btn:hover {
+    opacity: 0.85;
+    transform: translateX(3px);
+}

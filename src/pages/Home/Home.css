@@ -1,0 +1,51 @@
+/* wrapper that holds the parallax shapes behind the stats */
+.research-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.research-wrap > .research {
+    position: relative;
+    z-index: 1;
+}
+
+/* the column of stats on the home page */
+.page-home .research {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 120px 24px 80px;
+}
+
+/* each stat block */
+.page-home .stat-section {
+    margin-bottom: 140px;
+}
+
+/* heading for each stat */
+.page-home .stat-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+}
+
+/* paragraph under the heading */
+.page-home .stat-body {
+    font-size: 0.95rem;
+    color: var(--white);
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* small link to whatever source the stat came from */
+.page-home .stat-source {
+    font-size: 0.78rem;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
+.page-home .stat-source:hover {
+    text-decoration: underline;
+}

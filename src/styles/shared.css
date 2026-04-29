@@ -1,0 +1,19 @@
+@import url('base.css');
+
+/* shared bottom CTA used on Home and Opinion pages */
+.bottom-cta {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cta-label {
+    font-size: 0.95rem;
+    color: var(--gray);
+    font-style: italic;
+}
