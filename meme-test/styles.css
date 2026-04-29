@@ -15,7 +15,6 @@ body {
     background: black;
     color: white;
     padding: 16px;
-    border-radius: 8px;
     max-width: 600px;
     width: 100%;
 }
@@ -24,7 +23,6 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 4px;
 }
 
 .meme p {
