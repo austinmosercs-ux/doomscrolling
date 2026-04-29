@@ -12,12 +12,11 @@ async function loadMemes() {
 
     try {
         // pick a random safe subreddit to grab memes from
-        const sub = safeSubs[Math.floor(Math.random() * safeSubs.length)];
-        const response = await fetch("https://meme-api.com/gimme/" + sub + "/30");
+        const response = await fetch("https://meme-api.com/gimme/30");
         const data = await response.json();
 
         for (const meme of data.memes) {
-            // skip anything nsfw or marked as a spoiler just in case
+            // skip anything nsfw or marked as a spoiler, and skip anything without an image url
             if (meme.nsfw === true) continue;
             if (meme.spoiler === true) continue;
             if (!meme.url) continue;
