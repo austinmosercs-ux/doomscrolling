@@ -18,20 +18,20 @@
     font-family: var(--font);
     font-size: 0.78rem;
     font-weight: 500;
-    color: var(--gray);
+    color: #999;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
     transition: color 0.15s, background 0.15s;
 }
 
-/* hover state */
+/* hover */
 .nav-link:hover {
-    color: var(--white);
-    background: var(--dark);
+  color: #ffffff;
+  background: #1a1a1a;
 }
 
-/* the link for the page you're currently on */
+/* the link for the page you are currently on */
 .nav-link.active {
     color: var(--bg);
     background: var(--accent);

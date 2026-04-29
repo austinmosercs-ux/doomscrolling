@@ -15,8 +15,15 @@
     transition: opacity 0.15s, transform 0.15s;
 }
 
-/* nudges to the right and fades a little when you hover */
+/* when you hover it nudges right and gets a tiny bit faded */
 .btn:hover {
     opacity: 0.85;
     transform: translateX(3px);
+}
+
+/* makes sure links dont get the default underline */
+.btn:hover,
+.btn:focus,
+.btn:active {
+    text-decoration: none !important;
 }

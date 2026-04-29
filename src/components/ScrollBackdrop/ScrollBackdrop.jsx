@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import './ScrollBackdrop.css'
 
-// these are the floating shapes in the background
+// these are the floating shapes in the background.
 // speed = how fast the shape moves while scrolling
-// (positive = slower than scroll, negative = faster)
+// (positive = slower than scroll, negative = it moves the other way)
 const shapes = [
   { id: 'a', kind: 'ring',   top: '6%',  left:  '6%',   size: 220, speed:  0.35 },
   { id: 'b', kind: 'disc',   top: '14%', right: '12%',  size: 90,  speed: -0.25 },
@@ -21,25 +21,29 @@ const shapes = [
 export default function ScrollBackdrop() {
   const rootRef = useRef(null)
 
-  useEffect(() => {
-    const root = rootRef.current
+  useEffect(function () {
+    var root = rootRef.current
     if (!root) return
 
-    // grab all the shape elements once
-    const els = root.querySelectorAll('.backdrop-shape')
+    // grab all the shape elements one time
+    var els = root.querySelectorAll('.backdrop-shape')
 
-    // every time the page scrolls, move each shape by its speed
+    // every time the page scrolls move each shape based on its speed
     function handleScroll() {
-      const y = window.scrollY
+      var y = window.scrollY
       for (let i = 0; i < els.length; i++) {
-        const speed = parseFloat(els[i].dataset.speed) || 0
-        els[i].style.transform = 'translate3d(0, ' + (y * speed) + 'px, 0)'
+        var speed = parseFloat(els[i].dataset.speed)
+        if (!speed) speed = 0
+        // translate3d so it uses the gpu (read this on stackoverflow)
+        els[i].style.transform = "translate3d(0, " + (y * speed) + "px, 0)"
       }
     }
 
     handleScroll()
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    return function () {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
@@ -48,7 +52,7 @@ export default function ScrollBackdrop() {
         return (
           <span
             key={s.id}
-            className={'backdrop-shape backdrop-' + s.kind}
+            className={"backdrop-shape backdrop-" + s.kind}
             data-speed={s.speed}
             style={{
               top: s.top,

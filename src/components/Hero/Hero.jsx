@@ -1,10 +1,11 @@
 import './Hero.css'
 
-// hero banner shown at the top of every page
+// hero banner that shows up at the top of every page
 function Hero(props) {
-  const title = props.title
-  const intro = props.intro
-  const children = props.children
+  // pull out the props
+  var title = props.title
+  var intro = props.intro
+  var children = props.children
 
   return (
     <div className="hero">

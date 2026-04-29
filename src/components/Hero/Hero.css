@@ -2,7 +2,7 @@
 .hero {
     position: relative;
     width: 100%;
-    background: #0a0a0a;
+    background: #0a0a0a; /* slightly darker than the body bg, looks better */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.04em;
-    color: #fff;
+    color: #ffffff;
     animation: fade-in-up 0.9s ease-out both;
 }
 
@@ -36,3 +36,11 @@
     color: var(--gray);
     margin-top: 16px;
 }
+
+/* old style i was trying, keeping just in case */
+/*
+.hero h1 {
+    font-size: 80px;
+    color: #8ab4f8;
+}
+*/

@@ -4,8 +4,9 @@ import ScrollBackdrop from '../../components/ScrollBackdrop/ScrollBackdrop'
 import Button from '../../components/Button/Button'
 import './Home.css'
 
-// list of stat sections shown on the home page
-// each one has a heading, a body paragraph, and a link to the source
+// list of stat sections shown on the home page.
+// each one has a heading, a body paragraph, and a link to the source.
+// TODO: maybe add one more stat section if i can find a good source
 const stats = [
   {
     id: 'time',
@@ -64,7 +65,7 @@ export default function Home() {
         <ScrollBackdrop />
 
         <div className="research">
-          {/* go through every stat in the array and show it */}
+          {/* loop through every stat in the array and show it on the page */}
           {stats.map(function (stat) {
             return (
               <section key={stat.id} className="stat-section">
@@ -82,7 +83,7 @@ export default function Home() {
             )
           })}
 
-          {/* button at the bottom that takes you to my opinion page */}
+          {/* button at the bottom that takes you over to my opinion page */}
           <div className="bottom-cta">
             <p className="cta-label">want to hear a personal take on this?</p>
             <Button to="/opinion">read my opinion →</Button>

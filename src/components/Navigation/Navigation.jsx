@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom'
 import './Navigation.css'
 
-// top nav bar. highlights the link for whatever page you are on
+// top nav bar. it highlights the link for whatever page you are on
 function Navigation(props) {
-  const activePage = props.activePage
+  var activePage = props.activePage
 
-  // helper to add the active class
+  // helper that adds the "active" class if this is the current page
   function getClass(page) {
-    if (page === activePage) {
-      return 'nav-link active'
+    if (page == activePage) {
+      return "nav-link active"
     }
-    return 'nav-link'
+    return "nav-link"
   }
 
   return (

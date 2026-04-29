@@ -1,29 +1,36 @@
-// random helper functions
+// stuff.js
+// random functions and arrays I use in different places
+// TODO: maybe move the usernames into their own file later
 
 // pick one random item from an array
 export function randomPick(arr) {
-  const i = Math.floor(Math.random() * arr.length)
+  // get a random index
+  var i = Math.floor(Math.random() * arr.length)
   return arr[i]
 }
 
-// random integer between min and max (both inclusive)
+// random integer between min and max (both included)
 export function getRandomInt(min, max) {
+  // had to look this one up. the +1 is so the max is included
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 // pick "count" unique items from an array (no duplicates)
 export function pickUnique(arr, count) {
-  // copy the array so we don't mess with the original
-  const pool = arr.slice()
-  const result = []
+  // make a copy of the array so we don't change the original one
+  var pool = arr.slice()
+  var result = []
 
-  // can't pick more than there are
-  let take = count
-  if (take > pool.length) take = pool.length
+  // can't pick more items than the array has
+  var take = count
+  if (take > pool.length) {
+    take = pool.length
+  }
 
-  for (let i = 0; i < take; i++) {
-    const idx = Math.floor(Math.random() * pool.length)
+  for (var i = 0; i < take; i++) {
+    var idx = Math.floor(Math.random() * pool.length)
     result.push(pool[idx])
+    // remove the picked item so we don't pick it again
     pool.splice(idx, 1)
   }
   return result
@@ -31,10 +38,12 @@ export function pickUnique(arr, count) {
 
 // turn 12345 into "12.3k"
 export function formatLikes(n) {
+  // console.log("formatting", n)
   if (n >= 1000) {
-    return (n / 1000).toFixed(1) + 'k'
+    return (n / 1000).toFixed(1) + "k"
+  } else {
+    return String(n)
   }
-  return String(n)
 }
 
 // fake usernames used for the comments

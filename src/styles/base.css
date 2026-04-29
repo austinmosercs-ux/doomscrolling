@@ -5,7 +5,7 @@
 @import url('animations/scroll-bounce.css');
 @import url('animations/dot-grow.css');
 
-/* reset default browser margins / padding */
+/* reset the default browser margins / padding */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +19,7 @@
     padding: 0;
 }
 
-/* color variables and font I use across the whole site */
+/* color variables and the font I use across the whole site */
 :root {
     --bg: #111;
     --white: #ddd;
@@ -31,10 +31,10 @@
 
 /* default body styling */
 body {
-    background: var(--bg);
-    color: var(--white);
-    font-family: var(--font);
-    font-size: 16px;
-    line-height: 1.75;
-    min-height: 100vh;
+  background: #111;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.75;
+  min-height: 100vh;
 }
