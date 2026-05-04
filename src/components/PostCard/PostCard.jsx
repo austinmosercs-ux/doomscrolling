@@ -1,23 +1,10 @@
 import './PostCard.css'
 
-// PostCard handles 3 different kinds of posts:
-//   - "regular"     a normal feed post with image, caption, comments
-//   - "sponsored"   a fake ad
-//   - "commentary"  the gray dividers that yell at you for scrolling
-function PostCard(props) {
-  const post = props.post
-
-  // commentary dividers
+function PostCard({ post }) {
+  // commentary dividers between posts
   if (post.type === 'commentary') {
-    let divClass = 'commentary'
-    if (post.warning) {
-      divClass = 'commentary warning'
-    }
-    return (
-      <div className={divClass}>
-        {post.text}
-      </div>
-    )
+    const divClass = post.warning ? 'commentary warning' : 'commentary'
+    return <div className={divClass}>{post.text}</div>
   }
 
   // sponsored / ad post
@@ -70,7 +57,6 @@ function PostCard(props) {
         <strong>{post.username}</strong> {post.imageCaption}
       </div>
 
-      {/* loop through the comments and show each one */}
       <div className="post-comments">
         {post.commentList.map(function (c, i) {
           return (

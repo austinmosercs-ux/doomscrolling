@@ -4,8 +4,6 @@ import Opinion from './pages/Opinion/Opinion'
 import Doomscrolling from './pages/Doomscrolling/Doomscrolling'
 import Conclusion from './pages/Conclusion/Conclusion'
 
-// main app component. just sets up the router + routes.
-// TODO: add the doomscrolling and purpose pages once they are built
 export default function App() {
   return (
     <BrowserRouter>

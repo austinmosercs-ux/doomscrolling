@@ -1,6 +1,4 @@
-/* doomscrolling page styles */
-
-/* the body font is a little smaller on this page */
+/* slightly smaller text on this page */
 body {
     font-size: 0.9rem;
     line-height: 1.6;
@@ -10,16 +8,13 @@ body {
     --gray: #777;
 }
 
-/* feed container that holds all the post cards */
 .feed {
     max-width: 550px;
     margin: 0 auto;
     padding: 0 0 80px;
 }
 
-/* (PostCard styles live in PostCard.css) */
-
-/* timer in the top right corner that counts how long you've scrolled */
+/* timer that shows how long you've been scrolling */
 .scroll-timer {
     position: fixed;
     top: 56px;
@@ -39,19 +34,16 @@ body {
     transition: color 0.3s, border-color 0.3s;
 }
 
-/* turns the timer accent-colored after a couple minutes */
 .scroll-timer.warn {
     color: var(--accent);
     border-color: var(--accent);
 }
 
-/* turns the timer red after 5 minutes */
 .scroll-timer.danger {
     color: #ff6b6b;
     border-color: #ff6b6b;
 }
 
-/* button at the bottom of the screen that says "stop scrolling" */
 .stop-scrolling {
     position: fixed;
     bottom: 20px;
@@ -73,7 +65,6 @@ body {
     transition: opacity 0.4s;
 }
 
-/* when the button shows up, fade it in */
 .stop-scrolling.visible {
     opacity: 1;
     pointer-events: auto;
@@ -83,8 +74,7 @@ body {
     opacity: 0.85;
 }
 
-/* invisible 1px tall div that the IntersectionObserver watches.
-   when it scrolls into view, more posts get loaded. */
+/* invisible div the IntersectionObserver watches to load more posts */
 .sentinel {
     height: 1px;
 }

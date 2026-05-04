@@ -1,9 +1,27 @@
-/* wrapper that holds the parallax shapes behind the purpose copy */
 .purpose-wrap {
     position: relative;
     overflow: hidden;
 }
-.purpose-wrap > div {
+
+.purpose-content {
     position: relative;
     z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.purpose-content h2 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.purpose-content h2:first-child {
+    margin-top: 0;
+}
+
+.purpose-content p {
+    margin-bottom: 20px;
 }

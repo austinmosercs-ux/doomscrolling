@@ -1,8 +1,7 @@
-/* the big hero banner at the top of every page */
 .hero {
     position: relative;
     width: 100%;
-    background: #0a0a0a; /* slightly darker than the body bg, looks better */
+    background: #0a0a0a;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -12,14 +11,12 @@
     margin-bottom: 0;
 }
 
-/* container that centers the title + intro text */
 .hero-content {
     position: relative;
     z-index: 1;
     text-align: center;
 }
 
-/* big page title */
 .hero h1 {
     font-size: 96px;
     font-weight: 900;
@@ -29,18 +26,9 @@
     animation: fade-in-up 0.9s ease-out both;
 }
 
-/* the smaller intro line below the title */
 .hero-intro {
     font-size: 1.05rem;
     font-weight: 400;
     color: var(--gray);
     margin-top: 16px;
 }
-
-/* old style i was trying, keeping just in case */
-/*
-.hero h1 {
-    font-size: 80px;
-    color: #8ab4f8;
-}
-*/
