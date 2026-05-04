@@ -25,5 +25,5 @@
 .btn:hover,
 .btn:focus,
 .btn:active {
-    text-decoration: none !important;
+    text-decoration: none;
 }
