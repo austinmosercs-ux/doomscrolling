@@ -12,7 +12,7 @@ import {
   usernamesArr,
   timeLabels,
   randomCommentsArr
-} from '../../utils/helpers'
+} from '../../utils/random'
 
 // the actual scrolling page. shows an endless feed of memes,
 // fake ads, and commentary "warnings" that get more aggressive
