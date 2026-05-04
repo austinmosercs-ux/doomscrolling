@@ -178,37 +178,3 @@ export const randomCommentsArr = [
   'congrats this is the worst take ive seen today'
 ]
 
-// fake brands for the sponsored posts
-export const brandsArr = [
-  { name: 'NOVAVEX LABS',     initials: 'NVX', tagline: 'ENGINEERED FOR PEAK PERFORMANCE.',   url: 'novavex.com' },
-  { name: 'DRIFT APPAREL',    initials: 'DFT', tagline: 'WEAR THE VOID.',                     url: 'driftapparel.co' },
-  { name: 'ZYNCO',            initials: 'ZYN', tagline: 'EVERYTHING. DELIVERED. NOW.',        url: 'zynco.app' },
-  { name: 'PULSEWAVE',        initials: 'PLW', tagline: 'SOUND BEYOND LIMITS.',               url: 'pulsewave.io' },
-  { name: 'HEXACORE FITNESS', initials: 'HXC', tagline: 'YOUR BODY IS SOFTWARE. UPDATE IT.',  url: 'hexacore.fit' },
-  { name: 'LUMIVOX',          initials: 'LMV', tagline: 'SEE DIFFERENT.',                     url: 'lumivox.com' },
-  { name: 'GRINDSET CO.',     initials: 'GRD', tagline: 'SLEEP IS OPTIONAL.',                 url: 'grindset.co' },
-  { name: 'VOIDBOX',          initials: 'VBX', tagline: 'SUBSCRIBE TO EVERYTHING.',           url: 'voidbox.com' }
-]
-
-// commentary lines, going from chill to mean
-// {n} = post number, {t} = time in minutes
-export const commentarySubtle = [
-  'POST {n} OF ∞'
-]
-
-export const commentaryAware = [
-  "YOU'VE SEEN {n} POSTS. NONE OF THEM MATTERED.",
-  'POST {n}. STILL HERE?',
-  'YOU HAVE SCROLLED PAST {n} POSTS AND RETAINED NOTHING.',
-  '{n} POSTS DEEP. DO YOU EVEN REMEMBER THE FIRST ONE?',
-  'POST {n}. THE ALGORITHM IS PLEASED.'
-]
-
-export const commentaryAggressive = [
-  '⚠ YOU HAVE BEEN HERE FOR {t} MINUTES. THIS IS THE PROBLEM. ⚠',
-  '⚠ CLOSE THE TAB. GO OUTSIDE. DO LITERALLY ANYTHING ELSE. ⚠',
-  '⚠ THIS IS POST {n}. YOU WILL NOT REMEMBER A SINGLE ONE. ⚠',
-  '⚠ THE ALGORITHM THANKS YOU FOR YOUR TIME. ⚠',
-  '⚠ YOU JUST LOST ANOTHER MINUTE READING THIS WARNING AND KEPT SCROLLING ⚠',
-  '⚠ {t} MINUTES GONE. YOU ARE THE PRODUCT. ⚠'
-]

@@ -1,40 +1,16 @@
-/* fonts and animations */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
-@import url('animations/fade-in-up.css');
-@import url('animations/crossfade-zoom.css');
-@import url('animations/scroll-bounce.css');
-@import url('animations/dot-grow.css');
 
-/* reset the default browser margins / padding */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* color variables and the font I use across the whole site */
-:root {
-    --bg: #111;
-    --white: #ddd;
-    --accent: #8ab4f8;
-    --gray: #999;
-    --dark: #1a1a1a;
-    --font: 'Inter', system-ui, sans-serif;
-}
-
-/* default body styling */
 body {
-  background: #111;
-  color: var(--white);
-  font-family: var(--font);
-  font-size: 16px;
-  line-height: 1.75;
-  min-height: 100vh;
+    background: #111;
+    color: #ddd;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    min-height: 100vh;
 }

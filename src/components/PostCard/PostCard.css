@@ -1,7 +1,7 @@
 /* styles for one post in the feed */
 .post-card {
-    background: var(--dark);
-    border: 2px solid var(--white);
+    background: #1a1a1a;
+    border: 2px solid #ddd;
     padding: 14px;
     margin-bottom: 4px;
 }
@@ -19,8 +19,8 @@
     width: 34px;
     height: 34px;
     border-radius: 0;
-    background: var(--accent);
-    color: var(--bg);
+    background: #8ab4f8;
+    color: #111;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,18 +36,18 @@
 .post-username {
     font-weight: 600;
     font-size: 0.82rem;
-    color: var(--white);
+    color: #ddd;
     display: block;
 }
 
 .post-time {
     font-size: 0.7rem;
-    color: var(--gray);
+    color: #999;
 }
 
 /* the "..." dots in the corner of every post */
 .post-dots {
-    color: var(--gray);
+    color: #999;
     cursor: pointer;
     font-size: 1.1rem;
     letter-spacing: 0.05em;
@@ -67,7 +67,7 @@
     padding: 4px 0 8px;
     font-size: 0.9rem;
     line-height: 1.65;
-    color: var(--white);
+    color: #ddd;
 }
 
 /* caption under the image */
@@ -75,11 +75,11 @@
     padding-top: 4px;
     font-size: 0.84rem;
     line-height: 1.5;
-    color: var(--gray);
+    color: #999;
 }
 
 .post-caption strong {
-    color: var(--white);
+    color: #ddd;
     font-weight: 600;
 }
 
@@ -90,114 +90,11 @@
     padding: 10px 0 4px;
     font-size: 0.78rem;
     font-weight: 600;
-    color: var(--accent);
+    color: #8ab4f8;
 }
 
 .eng-share {
     margin-left: auto;
-}
-
-/* sponsored ad post variant */
-.post-card.sponsored {
-    border-color: var(--accent);
-    position: relative;
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-
-/* "SPONSORED" tag on the corner of an ad */
-.sponsored-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--accent);
-    color: var(--bg);
-    font-size: 0.6rem;
-    font-weight: 700;
-    padding: 3px 8px;
-    letter-spacing: 0.1em;
-    border-radius: 0 4px 0 4px;
-}
-
-.sponsored .avatar {
-    background: var(--white);
-    color: var(--bg);
-}
-
-.promoted-label {
-    font-size: 0.7rem;
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.ad-copy {
-    padding: 4px 0 8px;
-    font-size: 0.9rem;
-    line-height: 1.65;
-    color: var(--white);
-    text-transform: uppercase;
-}
-
-/* placeholder block for the fake ad image */
-.ad-image {
-    width: 100%;
-    height: 120px;
-    background: var(--bg);
-    border: 1px dashed #444;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    font-size: 0.72rem;
-    border-radius: 4px;
-}
-
-.ad-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.ad-url {
-    font-size: 0.7rem;
-    color: var(--gray);
-}
-
-/* "shop now" button on a sponsored post */
-.ad-cta {
-    font-family: var(--font);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 6px 16px;
-    letter-spacing: 0.05em;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-/* the gray dividers/warning lines between posts */
-.commentary {
-    text-align: center;
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    padding: 14px 0;
-    font-weight: 500;
-}
-
-/* big aggressive warning version of the commentary */
-.commentary.warning {
-    border: 1px solid var(--accent);
-    padding: 12px;
-    margin-bottom: 8px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    font-size: 0.75rem;
-    border-radius: 4px;
-    background: rgba(138, 180, 248, 0.05);
 }
 
 /* comment list at the bottom of a regular post */
@@ -215,7 +112,7 @@
 .post-comments::before {
     content: "top comments";
     font-size: 0.62rem;
-    color: var(--gray);
+    color: #999;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 4px;
@@ -225,11 +122,11 @@
 .post-comment {
     font-size: 0.78rem;
     line-height: 1.45;
-    color: var(--gray);
+    color: #999;
 }
 
 .post-comment strong {
-    color: var(--white);
+    color: #ddd;
     font-weight: 600;
     margin-right: 4px;
 }

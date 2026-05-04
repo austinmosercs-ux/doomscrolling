@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navigation from '../../components/Navigation/Navigation'
 import Hero from '../../components/Hero/Hero'
 import PostCard from '../../components/PostCard/PostCard'
@@ -10,11 +11,7 @@ import {
   pickUnique,
   usernamesArr,
   timeLabels,
-  randomCommentsArr,
-  brandsArr,
-  commentarySubtle,
-  commentaryAware,
-  commentaryAggressive
+  randomCommentsArr
 } from '../../utils/helpers'
 
 // the actual scrolling page. shows an endless feed of memes,
@@ -31,8 +28,6 @@ export default function Doomscrolling() {
   // refs are used for stuff that should NOT trigger a re-render
   const sentinelRef = useRef(null)
   const totalPostsRef = useRef(0)
-  const postsSinceCommentaryRef = useRef(0)
-  const nextCommentaryRef = useRef(getRandomInt(4, 6))
   const loadingRef = useRef(false)
   const timerStartRef = useRef(Date.now())
 
@@ -69,53 +64,6 @@ export default function Doomscrolling() {
     }
   }
 
-  // build a sponsored / fake ad post
-  function makeSponsoredPost() {
-    const brand = randomPick(brandsArr)
-    return {
-      id: 'sponsored-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
-      type: 'sponsored',
-      brandName: brand.name,
-      avatar: brand.initials,
-      tagline: brand.tagline,
-      url: brand.url
-    }
-  }
-
-  // build the gray warning lines that appear between posts.
-  // they get more aggressive the longer you have scrolled.
-  function makeCommentary(postCount) {
-    const minutes = Math.floor((Date.now() - timerStartRef.current) / 60000)
-
-    let template
-    let warning = false
-
-    if (postCount <= 15) {
-      template = randomPick(commentarySubtle)
-    } else if (postCount <= 35) {
-      template = randomPick(commentaryAware)
-    } else {
-      template = randomPick(commentaryAggressive)
-      warning = true
-    }
-
-    // replace the {n} and {t} placeholders in the template
-    let text = template.replace('{n}', String(postCount))
-    text = text.replace('{t}', String(minutes || 1))
-
-    let finalText = text
-    if (!warning) {
-      finalText = '━━━ ' + text + ' ━━━'
-    }
-
-    return {
-      id: 'commentary-' + totalPostsRef.current + '-' + Date.now(),
-      type: 'commentary',
-      text: finalText,
-      warning: warning
-    }
-  }
-
   // generate a batch of new posts and add them to the feed
   function generateBatch() {
     if (loadingRef.current) return
@@ -125,23 +73,10 @@ export default function Doomscrolling() {
     const newPosts = []
 
     for (let i = 0; i < batchSize; i++) {
-      // sometimes drop in a commentary divider
-      if (postsSinceCommentaryRef.current >= nextCommentaryRef.current) {
-        newPosts.push(makeCommentary(totalPostsRef.current))
-        postsSinceCommentaryRef.current = 0
-        nextCommentaryRef.current = getRandomInt(4, 6)
-      }
-
-      // 10% chance the post is a sponsored ad
-      if (Math.random() < 0.1) {
-        newPosts.push(makeSponsoredPost())
-      } else {
-        const post = makeRegularPost()
-        if (post) {
-          newPosts.push(post)
-          totalPostsRef.current = totalPostsRef.current + 1
-          postsSinceCommentaryRef.current = postsSinceCommentaryRef.current + 1
-        }
+      const post = makeRegularPost()
+      if (post) {
+        newPosts.push(post)
+        totalPostsRef.current = totalPostsRef.current + 1
       }
 
       // every 20 posts show the stop button
@@ -206,13 +141,6 @@ export default function Doomscrolling() {
     return 'scroll-timer'
   }
 
-  // show an alert with how long the user scrolled
-  function handleStopScrolling() {
-    const time = formatTime(scrollTime)
-    const mins = Math.floor(scrollTime / 60)
-    alert('You scrolled for ' + time + '. That\'s ' + mins + ' minutes of your life. 😅')
-  }
-
   return (
     <>
       <Navigation activePage="doomscrolling" />
@@ -233,9 +161,9 @@ export default function Doomscrolling() {
       <div className="sentinel" ref={sentinelRef} />
 
       {showStopBtn ? (
-        <button className="stop-scrolling" onClick={handleStopScrolling}>
+        <Link className="stop-scrolling" to="/conclusion" state={{ time: formatTime(scrollTime), posts: totalPostsRef.current }}>
           stop scrolling
-        </button>
+        </Link>
       ) : null}
     </>
   )

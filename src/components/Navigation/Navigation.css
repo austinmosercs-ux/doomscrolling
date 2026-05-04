@@ -13,7 +13,7 @@
 }
 
 .nav-link {
-    font-family: var(--font);
+    font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.78rem;
     font-weight: 500;
     color: #999;
@@ -30,7 +30,7 @@
 
 /* current page link */
 .nav-link.active {
-    color: var(--bg);
-    background: var(--accent);
+    color: #111;
+    background: #8ab4f8;
     font-weight: 600;
 }

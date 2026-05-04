@@ -10,15 +10,7 @@ export default function Opinion() {
     <div className="page-opinion">
       <Navigation activePage="opinion" />
 
-      <Hero
-        title="my take on it"
-        intro="An honest reflection on why we scroll and what it costs us"
-      >
-        <p className="hero-quote">
-          I tell myself I&apos;m just taking a quick break...{' '}
-          <span>then an hour is gone.</span>
-        </p>
-      </Hero>
+      <Hero title="my opinion" intro="An honest reflection on why we scroll and what it costs us" />
 
       <div className="essay-wrap">
         <ScrollBackdrop />

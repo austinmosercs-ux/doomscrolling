@@ -15,7 +15,7 @@ function Navigation({ activePage }) {
       <Link to="/" className={getClass('home')}>home</Link>
       <Link to="/opinion" className={getClass('opinion')}>my opinion</Link>
       <Link to="/doomscrolling" className={getClass('doomscrolling')}>start scrolling</Link>
-      <Link to="/purpose" className={getClass('purpose')}>purpose</Link>
+      <Link to="/conclusion" className={getClass('conclusion')}>conclusion</Link>
     </nav>
   )
 }

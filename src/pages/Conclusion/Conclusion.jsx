@@ -1,41 +1,71 @@
+import { useLocation } from 'react-router-dom'
 import Navigation from '../../components/Navigation/Navigation'
-import Hero from '../../components/Hero/Hero'
 import ScrollBackdrop from '../../components/ScrollBackdrop/ScrollBackdrop'
-import Button from '../../components/Button/Button'
+import Hero from '../../components/Hero/Hero'
 import './Conclusion.css'
 
-export default function Purpose() {
+export default function Conclusion() {
+  const location = useLocation()
+  const time = location.state?.time || '--:--'
+  const posts = location.state?.posts || '--'
+
   return (
     <>
-      <Navigation activePage="purpose" />
+      <Navigation activePage="conclusion" />
 
-      <Hero title="why this exists" intro="The purpose behind this project" />
-
-      <div className="purpose-wrap">
+      <div className="conclusion-wrapper">
         <ScrollBackdrop />
 
-        <div className="purpose-content">
-          <h2>What is this?</h2>
-          <p>
-            This is a project built to make the invisible visible. Doomscrolling isn&apos;t always something people consciously think about — it&apos;s more something that happens to them.
-          </p>
+        <Hero title="conclusion" intro="You already knew it was bad. You kept scrolling anyway." />
 
-          <h2>Why?</h2>
-          <p>
-            Because the costs are real. We spend hours of our lives on social media — time that compounds into weeks, months, and years. And for what? To feel more informed? To feel better? Usually neither.
-          </p>
+        <div className="conclusion-page">
 
-          <h2>What&apos;s the point?</h2>
-          <p>
-            This isn&apos;t about demonizing social media. It&apos;s about awareness. If you know how much time you&apos;re actually spending, you can make a real choice about whether that&apos;s how you want to spend it.
-          </p>
+        <section className="conclusion-section">
+          <span className="section-label">the point</span>
+          <h2 className="section-heading">This site was built to make you feel the time you waste scrolling.</h2>
+          <p className="section-body">Reading a stat is one thing. Watching your own timer tick while you keep scrolling anyway is the experience itself — an infinite feed that calls you out the longer you stay in it.</p>
+        </section>
 
-          <p>
-            And if you decide you do want to scroll? At least you&apos;ll do it on purpose.
-          </p>
+        <section className="conclusion-section">
+          <span className="section-label">your session</span>
+          <h2 className="section-heading">here is what this site is.</h2>
+          <div className="session-stats">
+            <div className="stat">
+              <span className="stat-value">{time}</span>
+              <span className="stat-label">time spent</span>
+            </div>
+            <div className="stat">
+              <span className="stat-value">{posts}</span>
+              <span className="stat-label">posts seen</span>
+            </div>
+          </div>
+          <p className="section-body">The home page shows the data. The opinion page is a personal take. The scrolling page is the experience itself — an infinite feed that calls you out the longer you stay in it.</p>
+        </section>
 
-          <Button to="/">← Back to start</Button>
-        </div>
+        <section className="conclusion-section">
+          <span className="section-label">what the research said</span>
+          <h2 className="section-heading">You were not imagining it.</h2>
+          <ul className="research-list">
+            <li>— 2h 23min a day or 36 full days a year.</li>
+            <li>— Your brain is being hacked and none of it is accidental.</li>
+            <li>— The same dopamine loop that drives gambling drives your feed.</li>
+            <li>— The news is not making you informed. It is making you anxious.</li>
+          </ul>
+        </section>
+
+        <section className="conclusion-section">
+          <span className="section-label">what i said</span>
+          <h2 className="section-heading">It starts as a quick break. It never ends that way.</h2>
+          <p className="section-body">Doomscrolling is a loop: you start because you are bored, you stay because it is entertaining, you stop feeling guilty, and the next day you do it again. The posts change. The behavior does not.</p>
+        </section>
+
+        <section className="conclusion-final">
+          <h2 className="final-heading">now close the tab.</h2>
+          <p className="final-body">You already knew all of this. The hard part is not knowing — it is doing something about it.</p>
+        </section>
+
+      </div>
+
       </div>
     </>
   )

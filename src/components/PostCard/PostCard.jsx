@@ -1,34 +1,6 @@
 import './PostCard.css'
 
 function PostCard({ post }) {
-  // commentary dividers between posts
-  if (post.type === 'commentary') {
-    const divClass = post.warning ? 'commentary warning' : 'commentary'
-    return <div className={divClass}>{post.text}</div>
-  }
-
-  // sponsored / ad post
-  if (post.type === 'sponsored') {
-    return (
-      <div className="post-card sponsored">
-        <div className="sponsored-badge">SPONSORED</div>
-        <div className="post-header">
-          <div className="avatar">{post.avatar}</div>
-          <div className="post-meta">
-            <span className="post-username">{post.brandName}</span>
-            <span className="promoted-label">PROMOTED</span>
-          </div>
-        </div>
-        <div className="ad-copy">{post.tagline}</div>
-        <div className="ad-image">[AD IMAGE]</div>
-        <div className="ad-footer">
-          <span className="ad-url">{post.url}</span>
-          <button className="ad-cta">SHOP NOW ►</button>
-        </div>
-      </div>
-    )
-  }
-
   // hide the post if the image fails to load
   function handleImageError(e) {
     e.currentTarget.parentElement.remove()

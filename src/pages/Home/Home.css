@@ -29,7 +29,7 @@
 
 .page-home .stat-body {
     font-size: 0.95rem;
-    color: var(--white);
+    color: #ddd;
     line-height: 1.7;
     margin-bottom: 18px;
 }
