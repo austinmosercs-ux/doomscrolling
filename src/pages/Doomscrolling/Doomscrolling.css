@@ -1,0 +1,90 @@
+/* doomscrolling page styles */
+
+/* the body font is a little smaller on this page */
+body {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+:root {
+    --gray: #777;
+}
+
+/* feed container that holds all the post cards */
+.feed {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+}
+
+/* (PostCard styles live in PostCard.css) */
+
+/* timer in the top right corner that counts how long you've scrolled */
+.scroll-timer {
+    position: fixed;
+    top: 56px;
+    right: 16px;
+    z-index: 99;
+    background: rgba(17, 17, 17, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 8px 14px;
+    font-family: var(--font);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+/* turns the timer accent-colored after a couple minutes */
+.scroll-timer.warn {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* turns the timer red after 5 minutes */
+.scroll-timer.danger {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+/* button at the bottom of the screen that says "stop scrolling" */
+.stop-scrolling {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-family: var(--font);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+/* when the button shows up, fade it in */
+.stop-scrolling.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.stop-scrolling:hover {
+    opacity: 0.85;
+}
+
+/* invisible 1px tall div that the IntersectionObserver watches.
+   when it scrolls into view, more posts get loaded. */
+.sentinel {
+    height: 1px;
+}

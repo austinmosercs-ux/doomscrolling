@@ -1,0 +1,9 @@
+/* wrapper that holds the parallax shapes behind the purpose copy */
+.purpose-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.purpose-wrap > div {
+    position: relative;
+    z-index: 1;
+}

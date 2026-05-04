@@ -1,0 +1,235 @@
+/* styles for one post in the feed */
+.post-card {
+    background: var(--dark);
+    border: 2px solid var(--white);
+    padding: 14px;
+    margin-bottom: 4px;
+}
+
+/* row at the top of the post: avatar, username, time */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* the little square avatar with the first letter of the username */
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 0;
+    background: var(--accent);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+}
+
+.post-meta {
+    flex: 1;
+}
+
+.post-username {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--white);
+    display: block;
+}
+
+.post-time {
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+/* the "..." dots in the corner of every post */
+.post-dots {
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+/* the actual post image */
+.post-image {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    display: block;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+}
+
+.post-text {
+    padding: 4px 0 8px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--white);
+}
+
+/* caption under the image */
+.post-caption {
+    padding-top: 4px;
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--gray);
+}
+
+.post-caption strong {
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* the like / comment / share row at the bottom of a post */
+.engagement {
+    display: flex;
+    gap: 16px;
+    padding: 10px 0 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.eng-share {
+    margin-left: auto;
+}
+
+/* sponsored ad post variant */
+.post-card.sponsored {
+    border-color: var(--accent);
+    position: relative;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+/* "SPONSORED" tag on the corner of an ad */
+.sponsored-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    letter-spacing: 0.1em;
+    border-radius: 0 4px 0 4px;
+}
+
+.sponsored .avatar {
+    background: var(--white);
+    color: var(--bg);
+}
+
+.promoted-label {
+    font-size: 0.7rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.ad-copy {
+    padding: 4px 0 8px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+/* placeholder block for the fake ad image */
+.ad-image {
+    width: 100%;
+    height: 120px;
+    background: var(--bg);
+    border: 1px dashed #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 0.72rem;
+    border-radius: 4px;
+}
+
+.ad-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ad-url {
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+/* "shop now" button on a sponsored post */
+.ad-cta {
+    font-family: var(--font);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    letter-spacing: 0.05em;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* the gray dividers/warning lines between posts */
+.commentary {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    padding: 14px 0;
+    font-weight: 500;
+}
+
+/* big aggressive warning version of the commentary */
+.commentary.warning {
+    border: 1px solid var(--accent);
+    padding: 12px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    background: rgba(138, 180, 248, 0.05);
+}
+
+/* comment list at the bottom of a regular post */
+.post-comments {
+    margin-top: 12px;
+    padding: 10px 0 2px 12px;
+    border-top: 1px solid #2a2a2a;
+    border-left: 2px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* "top comments" label above the comments */
+.post-comments::before {
+    content: "top comments";
+    font-size: 0.62rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 4px;
+}
+
+/* one individual comment */
+.post-comment {
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--gray);
+}
+
+.post-comment strong {
+    color: var(--white);
+    font-weight: 600;
+    margin-right: 4px;
+}
