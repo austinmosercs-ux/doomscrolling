@@ -39,7 +39,7 @@ export function formatLikes(n) {
 
 // fake usernames used for the comments
 export const usernamesArr = [
-  '@scrollqueen', '@notaddicttho', '@justonemore_fr', '@brainrot.exe',
+  '@sireliam1', '@elsandias', '@notaddicttho', '@justonemore_fr', '@brainrot.exe',
   '@5moremin', '@cantputitdown', '@sendhelp_lol', '@touchgrass.never',
   '@procrastinator99', '@itsfineiswear', '@feedme.content', '@doomscroll.daily',
   '@nothingimportant', '@justchecking_', '@phonebrain2024', '@ugh.anyway'
