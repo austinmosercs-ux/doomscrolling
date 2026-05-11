@@ -17,6 +17,7 @@
     text-align: center;
 }
 
+/* container that holds the slideshow images */
 .hero-slideshow {
     position: absolute;
     inset: 0;
@@ -27,20 +28,30 @@
     pointer-events: none;
 }
 
+/* each image is stacked on top of each other and fades in and out */
 .hero-slideshow img {
     position: absolute;
     width: 320px;
     height: 320px;
     object-fit: contain;
     opacity: 0;
-    filter: url(#hero-fill-holes);
+    filter: brightness(0) invert(1);
     animation: hero-fade 18s linear infinite;
 }
 
+/* delay each image so they take turns showing up */
+.hero-slideshow img:nth-child(1) { animation-delay: 0s; }
+.hero-slideshow img:nth-child(2) { animation-delay: 3s; }
+.hero-slideshow img:nth-child(3) { animation-delay: 6s; }
+.hero-slideshow img:nth-child(4) { animation-delay: 9s; }
+.hero-slideshow img:nth-child(5) { animation-delay: 12s; }
+.hero-slideshow img:nth-child(6) { animation-delay: 15s; }
+
+/* fade animation - shows the image then hides it */
 @keyframes hero-fade {
     0%   { opacity: 0; }
-    2%   { opacity: 0.8; }
-    14%  { opacity: 0.8; }
+    2%   { opacity: 0.05; }
+    14%  { opacity: 0.05; }
     17%  { opacity: 0; }
     100% { opacity: 0; }
 }
