@@ -13,3 +13,6 @@
 
 ## Doomscrolling
 - [ ] Find real usernames to replace the placeholder usernames
+
+## Overall:
+- [] Update the text so its more simpler to read
