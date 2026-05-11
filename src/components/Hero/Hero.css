@@ -57,7 +57,7 @@
 }
 
 .hero h1 {
-    font-size: 96px;
+    font-size: 124px;
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.04em;
@@ -66,8 +66,8 @@
 }
 
 .hero-intro {
-    font-size: 1.05rem;
+    font-size: 1.35rem;
     font-weight: 400;
     color: #999;
-    margin-top: 16px;
+    margin-top: 20px;
 }
