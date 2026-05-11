@@ -14,3 +14,20 @@ body {
     line-height: 1.75;
     min-height: 100vh;
 }
+
+.next-section {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.next-label {
+    font-size: 15px;
+    color: #999;
+    font-style: italic;
+}

@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 0.82rem;
+    font-size: 13px;
     flex-shrink: 0;
 }
 
@@ -35,13 +35,13 @@
 
 .post-username {
     font-weight: 600;
-    font-size: 0.82rem;
+    font-size: 13px;
     color: #ddd;
     display: block;
 }
 
 .post-time {
-    font-size: 0.7rem;
+    font-size: 11px;
     color: #999;
 }
 
@@ -49,8 +49,7 @@
 .post-dots {
     color: #999;
     cursor: pointer;
-    font-size: 1.1rem;
-    letter-spacing: 0.05em;
+    font-size: 18px;
 }
 
 /* the actual post image */
@@ -65,7 +64,7 @@
 
 .post-text {
     padding: 4px 0 8px;
-    font-size: 0.9rem;
+    font-size: 14px;
     line-height: 1.65;
     color: #ddd;
 }
@@ -73,7 +72,7 @@
 /* caption under the image */
 .post-caption {
     padding-top: 4px;
-    font-size: 0.84rem;
+    font-size: 13px;
     line-height: 1.5;
     color: #999;
 }
@@ -88,7 +87,7 @@
     display: flex;
     gap: 16px;
     padding: 10px 0 4px;
-    font-size: 0.78rem;
+    font-size: 12px;
     font-weight: 600;
     color: #8ab4f8;
 }
@@ -111,16 +110,15 @@
 /* "top comments" label above the comments */
 .post-comments::before {
     content: "top comments";
-    font-size: 0.62rem;
+    font-size: 10px;
     color: #999;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
     margin-bottom: 4px;
 }
 
 /* one individual comment */
 .post-comment {
-    font-size: 0.78rem;
+    font-size: 12px;
     line-height: 1.45;
     color: #999;
 }

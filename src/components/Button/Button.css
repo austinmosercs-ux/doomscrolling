@@ -1,29 +1,16 @@
-/* button used across the site */
 .btn {
     display: inline-block;
     background: #8ab4f8;
     color: #111;
-    font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 15px;
     font-weight: 600;
     padding: 14px 32px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     text-decoration: none;
-    letter-spacing: 0.02em;
     cursor: pointer;
-    transition: opacity 0.15s, transform 0.15s;
 }
 
-/* when you hover it nudges right and gets a tiny bit faded */
 .btn:hover {
     opacity: 0.85;
-    transform: translateX(3px);
-}
-
-/* makes sure links dont get the default underline */
-.btn:hover,
-.btn:focus,
-.btn:active {
-    text-decoration: none;
 }

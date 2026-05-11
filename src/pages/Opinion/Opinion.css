@@ -1,5 +1,5 @@
 .hero-quote {
-    font-size: 1.05rem;
+    font-size: 17px;
     font-weight: 400;
     color: #999;
     font-style: italic;
@@ -9,7 +9,7 @@
 
 .hero-quote span {
     display: block;
-    font-size: 0.85rem;
+    font-size: 14px;
     margin-top: 6px;
     color: #666;
     font-style: italic;
@@ -36,7 +36,7 @@
 }
 
 .page-opinion .essay-body {
-    font-size: 1.05rem;
+    font-size: 17px;
     color: #ddd;
     line-height: 1.85;
     text-align: left;

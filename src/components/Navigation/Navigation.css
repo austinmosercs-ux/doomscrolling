@@ -6,21 +6,20 @@
     align-items: center;
     gap: 4px;
     padding: 12px 20px;
-    background: rgba(17, 17, 17, 0.9);
+    background: #111;
+    opacity: 0.9;
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid #2a2a2a;
 }
 
 .nav-link {
     font-family: 'Inter', system-ui, sans-serif;
-    font-size: 0.78rem;
+    font-size: 13px;
     font-weight: 500;
     color: #999;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
-    transition: color 0.15s, background 0.15s;
 }
 
 .nav-link:hover {

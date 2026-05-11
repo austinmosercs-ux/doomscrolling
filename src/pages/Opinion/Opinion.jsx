@@ -59,8 +59,8 @@ export default function Opinion() {
           </section>
 
           {/* button at the bottom to take you to the scroll test */}
-          <div className="bottom-cta">
-            <p className="cta-label">ready to scroll intentionally?</p>
+          <div className="next-section">
+            <p className="next-label">ready to scroll intentionally?</p>
             <Button to="/doomscrolling">see what's trending →</Button>
           </div>
         </div>

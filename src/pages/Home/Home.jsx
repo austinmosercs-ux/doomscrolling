@@ -56,8 +56,8 @@ export default function Home() {
             </a>
           </section>
 
-          <div className="bottom-cta">
-            <p className="cta-label">want to hear a personal take on this?</p>
+          <div className="next-section">
+            <p className="next-label">want to hear a personal take on this?</p>
             <Button to="/opinion">read my opinion →</Button>
           </div>
 
