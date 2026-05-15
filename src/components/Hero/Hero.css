@@ -28,7 +28,6 @@
     pointer-events: none;
 }
 
-/* each image is stacked on top of each other and fades in and out */
 .hero-slideshow img {
     position: absolute;
     width: 320px;
@@ -48,8 +47,8 @@
 
 @keyframes hero-fade {
     0%   { opacity: 0; }
-    2%   { opacity: 0.05; }
-    14%  { opacity: 0.05; }
+    2%   { opacity: 0.1; }
+    14%  { opacity: 0.1; }
     17%  { opacity: 0; }
     100% { opacity: 0; }
 }

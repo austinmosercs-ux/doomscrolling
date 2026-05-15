@@ -39,10 +39,10 @@ export function formatLikes(n) {
 
 // fake usernames used for the comments
 export const usernamesArr = [
-  '@sireliam1', '@elsandias', '@notaddicttho', '@justonemore_fr', '@brainrot.exe',
-  '@5moremin', '@cantputitdown', '@sendhelp_lol', '@touchgrass.never',
-  '@procrastinator99', '@itsfineiswear', '@feedme.content', '@doomscroll.daily',
-  '@nothingimportant', '@justchecking_', '@phonebrain2024', '@ugh.anyway'
+  '@sireliam1', '@admiraldie_go', '@notaddicttho', '@grenaadeer', '@ogkillerboss55888',
+  '@lordkhan', '@lucian0956', '@roogingy', '@crippledwalk',
+  '@10denverdog', '@frogger25', '@oslearn', '@wistful',
+  '@electricmean89', '@parad0xical', '@techn0waffles'
 ]
 
 // labels for how long ago a post was made

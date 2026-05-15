@@ -23,7 +23,7 @@ export default function Conclusion() {
         <section className="conclusion-section">
           <span className="section-label">the point</span>
           <h2 className="section-heading">This site was built to make you feel the time you waste scrolling.</h2>
-          <p className="section-body">Reading a stat is one thing. Watching your own timer tick while you keep scrolling anyway is the experience itself — an infinite feed that calls you out the longer you stay in it.</p>
+          <p className="section-body">Reading a stat is one thing. Watching your own timer tick while you keep scrolling anyway is the experience itself. It is an infinite feed that calls you out the longer you stay in it.</p>
         </section>
 
         <section className="conclusion-section">
@@ -39,17 +39,17 @@ export default function Conclusion() {
               <span className="stat-label">posts seen</span>
             </div>
           </div>
-          <p className="section-body">The home page shows the data. The opinion page is a personal take. The scrolling page is the experience itself — an infinite feed that calls you out the longer you stay in it.</p>
+          <p className="section-body">The home page shows the data. The opinion page is a personal take. The scrolling page is the experience itself. It is an infinite feed that calls you out the longer you stay in it.</p>
         </section>
 
         <section className="conclusion-section">
           <span className="section-label">what the research said</span>
           <h2 className="section-heading">You were not imagining it.</h2>
           <ul className="research-list">
-            <li>— 2h 23min a day or 36 full days a year.</li>
-            <li>— Your brain is being hacked and none of it is accidental.</li>
-            <li>— The same dopamine loop that drives gambling drives your feed.</li>
-            <li>— The news is not making you informed. It is making you anxious.</li>
+            <li>2h 23min a day or 36 full days a year.</li>
+            <li>Your brain is being hacked and none of it is accidental.</li>
+            <li>The same dopamine loop that drives gambling drives your feed.</li>
+            <li>The news is not making you informed. It is making you anxious.</li>
           </ul>
         </section>
 
@@ -61,7 +61,7 @@ export default function Conclusion() {
 
         <section className="conclusion-final">
           <h2 className="final-heading">now close the tab.</h2>
-          <p className="final-body">You already knew all of this. The hard part is not knowing — it is doing something about it.</p>
+          <p className="final-body">You already knew all of this. The hard part is not knowing. It is doing something about it.</p>
         </section>
 
       </div>

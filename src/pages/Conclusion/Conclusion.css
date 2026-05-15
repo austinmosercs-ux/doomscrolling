@@ -1,5 +1,5 @@
 .conclusion-page {
-    max-width: 500px;
+    max-width: 640px;
     margin: 0 auto;
     padding: 80px 24px 120px;
 }
@@ -22,15 +22,19 @@
 }
 
 .section-heading {
-    font-size: 26px;
+    font-size: 31px;
     font-weight: 700;
     color: #fff;
     line-height: 1.25;
     margin-bottom: 20px;
 }
 
+.section-heading::first-letter {
+    text-transform: uppercase;
+}
+
 .section-body {
-    font-size: 15px;
+    font-size: 17px;
     color: #999;
     line-height: 1.75;
 }
@@ -67,7 +71,7 @@
 }
 
 .research-list li {
-    font-size: 15px;
+    font-size: 17px;
     color: #999;
     line-height: 1.6;
 }
@@ -78,14 +82,18 @@
 }
 
 .final-heading {
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 16px;
 }
 
+.final-heading::first-letter {
+    text-transform: uppercase;
+}
+
 .final-body {
-    font-size: 15px;
+    font-size: 17px;
     color: #999;
     line-height: 1.75;
 }

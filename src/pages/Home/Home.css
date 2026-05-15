@@ -9,7 +9,7 @@
 }
 
 .page-home .research {
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto;
     padding: 120px 24px 80px;
 }
@@ -19,7 +19,7 @@
 }
 
 .page-home .stat-heading {
-    font-size: 24px;
+    font-size: 29px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.3;
@@ -27,7 +27,7 @@
 }
 
 .page-home .stat-body {
-    font-size: 15px;
+    font-size: 17px;
     color: #ddd;
     line-height: 1.7;
     margin-bottom: 18px;
